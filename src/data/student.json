@@ -1,0 +1,82 @@
+{
+    "name": "Ba, abdelhadi",
+    "modules": [
+        {
+            "module": "Calculus 1",
+            "prof": "Boustil Amel",
+            "note": 12
+        },
+        {
+            "module": "Web Development",
+            "prof": "Youcef Yehiatene",
+            "note": 15
+        },
+        {
+            "module": "Data Structure",
+            "prof": "Redoaune Siaci",
+            "note": 8
+        },
+        {
+            "module": "Analyse",
+            "prof": "Redoaune Siaci",
+            "note": 4
+        },
+        {
+            "module": "UI/UX",
+            "prof": "Djamel Belkacemi",
+            "note": 18
+        }
+    ],
+    "recours": [
+        {
+            "module": "Web Development",
+            "prof": "Youcef Yehiatene",
+            "submission_date": "06-03-2023",
+            "objection_text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, dolorum dolores. Voluptates totam ipsa rerum placeat quod ab incidunt neque, culpa eligendi ratione vitae dolore id? Laborum explicabo excepturi odio!",
+            "justificatif": "Link",
+            "etat": "En étude",
+            "old_note": "15",
+            "new_note": ""
+        },
+        {
+            "module": "Web Development",
+            "prof": "Youcef Yehiatene",
+            "submission_date": "06-03-2023",
+            "objection_text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, dolorum dolores. Voluptates totam ipsa rerum placeat quod ab incidunt neque, culpa eligendi ratione vitae dolore id? Laborum explicabo excepturi odio!",
+            "justificatif": "Link",
+            "etat": "Favorable",
+            "old_note": "14",
+            "new_note": "15"
+        },
+        {
+            "module": "Web Development",
+            "prof": "Youcef Yehiatene",
+            "submission_date": "06-03-2023",
+            "objection_text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, dolorum dolores. Voluptates totam ipsa rerum placeat quod ab incidunt neque, culpa eligendi ratione vitae dolore id? Laborum explicabo excepturi odio!",
+            "justificatif": "Link",
+            "etat": "Favorable",
+            "old_note": "14",
+            "new_note": "15"
+        },
+        {
+            "module": "Web Development",
+            "prof": "Youcef Yehiatene",
+            "submission_date": "06-03-2023",
+            "objection_text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, dolorum dolores. Voluptates totam ipsa rerum placeat quod ab incidunt neque, culpa eligendi ratione vitae dolore id? Laborum explicabo excepturi odio!",
+            "justificatif": "Link",
+            "etat": "Defavorable",
+            "old_note": "15",
+            "new_note": ""
+        },
+        {
+            "module": "Web Development",
+            "prof": "Youcef Yehiatene",
+            "submission_date": "06-03-2023",
+            "objection_text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, dolorum dolores. Voluptates totam ipsa rerum placeat quod ab incidunt neque, culpa eligendi ratione vitae dolore id? Laborum explicabo excepturi odio!",
+            "justificatif": "Link",
+            "etat": "Defavorable",
+            "old_note": "15",
+            "new_note": ""
+        }
+    ]
+}
