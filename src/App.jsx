@@ -3,18 +3,18 @@ import { Routes, Route } from 'react-router'
 import { USER_TYPES } from './data/Consts'
 import SideBar from './components/SideBar'
 import Home from './pages/Home.jsx'
-
+import { sideBarHandler } from './utils/sideBarHandler'
 function App() {
   const User = USER_TYPES.STUDENT;
   const isLogged = true
   return (
-    <main className='main'>
-      <SideBar />
-      <Routes>
+    <Routes>
+      <Route element={<SideBar links= {sideBarHandler(User)}/>}>
         <Route path='/' element={<Home user={User} isLogged={isLogged}/>}/>
-        <Route path='*' element={<NotFound />}/>
-      </Routes>
-    </main>
+        <Route path='/recours' element={<Home user={User} isLogged={isLogged}/>}/>
+      </Route>
+      <Route path='*' element={<NotFound />}/>
+    </Routes>
   )
 
 }

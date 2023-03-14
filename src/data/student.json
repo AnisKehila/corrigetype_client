@@ -78,5 +78,9 @@
             "old_note": "15",
             "new_note": ""
         }
+    ],
+    "notifications" : [
+        {"id": 0, "content" : "Youcef Yehiatene a réviser la note du module development web!"},
+        {"id": 1, "content" : "Youcef Yehiatene a réviser la note du module development web!"}
     ]
 }
