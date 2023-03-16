@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ReactComponent as SearchIcon } from "../../assets/icons/search.svg";
 import ModulsTable from "../../components/ModulsTable";
 
@@ -13,6 +13,7 @@ export default function Ctype({setModule, student}) {
             ) : student.modules
         );
     };
+    
     const numOfModule = () => {
         const count = student.modules.length;
         return count < 10 ? `0${count}` : count;
