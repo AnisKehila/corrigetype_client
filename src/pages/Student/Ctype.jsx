@@ -3,35 +3,20 @@ import { ReactComponent as SearchIcon } from "../../assets/icons/search.svg";
 import ModulsTable from "../../components/ModulsTable";
 
 export default function Ctype({setModule, student}) {
-    const [searchValue, setSearchValue] = useState('');
     const [filteredModules, setFilteredModules] = useState(student.modules);
 
     const handleSearchChange = (event) => {
-        setSearchValue(event.target.value);
-    };
-    
-    useEffect(() => {
-        const handleKeyDown = (event) => {
-            if (event.keyCode === 8) {
-                setFilteredModules(()=> student.modules);
-            }
-        };
-        setFilteredModules(() => 
-            filteredModules.filter((item) =>
-                item.module.toLowerCase().includes(searchValue.toLowerCase())
-            )
+        const value = event.target.value;
+        setFilteredModules(
+            value.trim() != "" ? student.modules.filter((item) =>
+                item.module.toLowerCase().match(value.toLowerCase())
+            ) : student.modules
         );
-        document.addEventListener('keydown', handleKeyDown);
-        return () => {
-            document.removeEventListener('keydown', handleKeyDown);
-        };
-    }, [searchValue]);
+    };
     const numOfModule = () => {
-        let i = 0;
-        student.modules.map(module => i++);
-        return i < 10 ? `0${i}`: i;
+        const count = student.modules.length;
+        return count < 10 ? `0${count}` : count;
     }
-    console.log(filteredModules)
     return (
         <>
             <div className="title">
@@ -40,9 +25,26 @@ export default function Ctype({setModule, student}) {
             </div>
             <div className="search">
                 <SearchIcon />
-                <input type="text" placeholder="recherche par module" value={searchValue} onChange={handleSearchChange}/>
+                <input type="text" placeholder="recherche par module" onChange={handleSearchChange}/>
             </div>
             <ModulsTable modules={filteredModules}/>
         </>
     )
-}
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
