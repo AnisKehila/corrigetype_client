@@ -4,26 +4,49 @@
         {
             "module": "Calculus 1",
             "prof": "Boustil Amel",
+            "hasRecour": true,
             "note": 12
         },
         {
             "module": "Web Development",
             "prof": "Youcef Yehiatene",
+            "hasRecour": false,
             "note": 15
         },
         {
             "module": "Data Structure",
             "prof": "Redoaune Siaci",
+            "hasRecour": false,
             "note": 8
         },
         {
             "module": "Analyse",
             "prof": "Redoaune Siaci",
+            "hasRecour": true,
             "note": 4
         },
         {
             "module": "UI/UX",
             "prof": "Djamel Belkacemi",
+            "hasRecour": false,
+            "note": 18
+        },
+        {
+            "module": "Projet Encadré",
+            "prof": "Djamel Belkacemi",
+            "hasRecour": false,
+            "note": 18
+        },
+        {
+            "module": "Infographie",
+            "prof": "Djamel Belkacemi",
+            "hasRecour": true,
+            "note": 18
+        },
+        {
+            "module": "Web Development Avancé",
+            "prof": "Youcef Yehiatene",
+            "hasRecour": false,
             "note": 18
         }
     ],

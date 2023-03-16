@@ -31,7 +31,7 @@ a {
         align-items: flex-start;
         padding: 32px 24px;
         gap: 10px;
-        width: 290px;
+        width: 17%;
         height: 100vh;
         background: #FFFFFF;
         box-shadow: 0px 0px 10px rgba(132, 132, 132, 0.15);
@@ -90,8 +90,8 @@ a {
     }
     .content {
         padding: 32px;
-        max-width: 1200px;
-        width: 100%;
+        width: 80%;
+        max-width: 1280px;
         margin: 0 auto;
         nav {
             display: flex;
@@ -174,6 +174,7 @@ a {
         }
     }
     main {
+        width: 100%;
         .title {
             display: flex;
             align-items: center;
@@ -208,6 +209,73 @@ a {
                 width: 100%;
                 height: 100%;
                 outline: none;
+            }
+        }
+        .table{
+            overflow-x: auto;
+            filter: drop-shadow(0px 0px 10px rgba(132, 132, 132, 0.15));
+            border-radius: 8px;
+            display: block;
+            table {
+                min-width: 1000px;
+                width: 100%;
+                background-color: #FFFFFF;
+                border-collapse: collapse;
+                td {
+                    font-weight: 600;
+                    &:nth-child(n+3) {
+                        text-align: center;
+                    }
+                }
+                thead {
+                    td {
+                        color: $text_secondary;
+                        padding: 15px 56px 15px 12px;
+                    }
+                }
+                tbody {
+                    tr:nth-child(odd) {
+                        background-color: #F8F8F8;
+                    }
+                    tr:hover {
+                        background-color: #ECF0FF;
+                    }
+                    td {
+                        padding: 22px 56px 22px 12px;
+                    }
+                    td.consult,
+                    td.recourBtn {
+                        span {
+                            display: inline-flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 8px;
+                        }
+                    }
+                    td.consult,
+                    td.recourBtn.active {
+                        span {
+                            color: $accent_primary;
+                            cursor: pointer;
+                            svg {
+                                path {
+                                    fill: $accent_primary;
+                                }
+                            }
+                        }
+                    }
+                    td.recourBtn {
+                        span {
+                            color: #8A8A8A;
+                            cursor: default ;
+                            svg {
+                                path {
+                                    fill: #8A8A8A;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

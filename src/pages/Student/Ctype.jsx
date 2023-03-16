@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { ReactComponent as SearchIcon } from "../../assets/icons/search.svg";
+import ModulsTable from "../../components/ModulsTable";
+
 export default function Ctype({setModule, student}) {
     const [searchValue, setSearchValue] = useState('');
     const [filteredModules, setFilteredModules] = useState(student.modules);
@@ -7,10 +9,10 @@ export default function Ctype({setModule, student}) {
     const handleSearchChange = (event) => {
         setSearchValue(event.target.value);
     };
+    
     useEffect(() => {
         const handleKeyDown = (event) => {
             if (event.keyCode === 8) {
-                console.log('h')
                 setFilteredModules(()=> student.modules);
             }
         };
@@ -40,6 +42,7 @@ export default function Ctype({setModule, student}) {
                 <SearchIcon />
                 <input type="text" placeholder="recherche par module" value={searchValue} onChange={handleSearchChange}/>
             </div>
+            <ModulsTable modules={filteredModules}/>
         </>
     )
 }
