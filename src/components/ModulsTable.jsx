@@ -1,20 +1,14 @@
-import { useState,useEffect, useRef } from "react"
+import { useState } from "react"
 import { ReactComponent as ArrowIcon } from "../assets/icons/left_to_right_arrow.svg"
 import RecourForm from "./RecourForm"
 export default function ModulsTable({modules}) {
     const [formToggle, setFormToggle] = useState(false);
-    const formRef = useRef(null)
-    useEffect(() => {
-        const removeForm = (event) => {
-            if(formRef.current && !formRef.current.contains(event.target)) {
-                setFormToggle(false);
-            }
-        }
-        document.addEventListener('mousedown', removeForm);
-        return () => {
-            document.removeEventListener('mousedown', removeForm);
-        };
-    }, [formToggle]);
+    const [currentModule, setCurrentModule] = useState('');
+
+    const openForm = (item) => {
+        setFormToggle(() => !formToggle ? true : false);
+        setCurrentModule(item.module);
+    };
     return (
         <>
             <div className="table">
@@ -40,8 +34,8 @@ export default function ModulsTable({modules}) {
                                             Consulter
                                         </span>
                                     </td>
-                                    <td className={`recourBtn ${item.hasRecour ? '' : 'active'}`} onClick={() => item.hasRecour ? null : setFormToggle(() => !formToggle ? true : false)}>
-                                        <span>
+                                    <td className={`recourBtn ${item.hasRecour ? '' : 'active'}`} >
+                                        <span onClick={() => item.hasRecour ? null : openForm(item)}>
                                             {item.hasRecour ? `Envoyé` : `Recours`} <ArrowIcon />
                                         </span>
                                     </td>
@@ -52,7 +46,7 @@ export default function ModulsTable({modules}) {
                 </table>
             </div>
             <div className={`recour-form${formToggle ? " active" : ''}`} >
-                <RecourForm refe={formRef} setFormToggle = {setFormToggle}/>
+                <RecourForm setFormToggle = {setFormToggle} currentModule={currentModule}/>
             </div>
         </>
     )

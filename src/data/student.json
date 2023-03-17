@@ -56,7 +56,7 @@
             "prof": "Youcef Yehiatene",
             "submission_date": "06-03-2023",
             "objection_text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, dolorum dolores. Voluptates totam ipsa rerum placeat quod ab incidunt neque, culpa eligendi ratione vitae dolore id? Laborum explicabo excepturi odio!",
-            "justificatif": "Link",
+            "justificatif": "./example.pdf",
             "etat": "En étude",
             "old_note": "15",
             "new_note": ""
@@ -66,7 +66,7 @@
             "prof": "Youcef Yehiatene",
             "submission_date": "06-03-2023",
             "objection_text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, dolorum dolores. Voluptates totam ipsa rerum placeat quod ab incidunt neque, culpa eligendi ratione vitae dolore id? Laborum explicabo excepturi odio!",
-            "justificatif": "Link",
+            "justificatif": "./example.pdf",
             "etat": "Favorable",
             "old_note": "14",
             "new_note": "15"
@@ -76,7 +76,7 @@
             "prof": "Youcef Yehiatene",
             "submission_date": "06-03-2023",
             "objection_text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, dolorum dolores. Voluptates totam ipsa rerum placeat quod ab incidunt neque, culpa eligendi ratione vitae dolore id? Laborum explicabo excepturi odio!",
-            "justificatif": "Link",
+            "justificatif": "./example.pdf",
             "etat": "Favorable",
             "old_note": "14",
             "new_note": "15"
@@ -86,7 +86,7 @@
             "prof": "Youcef Yehiatene",
             "submission_date": "06-03-2023",
             "objection_text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, dolorum dolores. Voluptates totam ipsa rerum placeat quod ab incidunt neque, culpa eligendi ratione vitae dolore id? Laborum explicabo excepturi odio!",
-            "justificatif": "Link",
+            "justificatif": "./example.pdf",
             "etat": "Defavorable",
             "old_note": "15",
             "new_note": ""
@@ -96,7 +96,7 @@
             "prof": "Youcef Yehiatene",
             "submission_date": "06-03-2023",
             "objection_text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, dolorum dolores. Voluptates totam ipsa rerum placeat quod ab incidunt neque, culpa eligendi ratione vitae dolore id? Laborum explicabo excepturi odio!",
-            "justificatif": "Link",
+            "justificatif": "./example.pdf",
             "etat": "Defavorable",
             "old_note": "15",
             "new_note": ""

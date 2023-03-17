@@ -1,16 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ReactComponent as ExitIcon } from "../assets/icons/exit.svg";
 import { ReactComponent as ResizeIcon } from "../assets/icons/textarea.svg";
 import { ReactComponent as UploadIcon } from "../assets/icons/upload.svg";
 import { ReactComponent as NoteIcon } from "../assets/icons/note.svg";
 import waitIcon from "../assets/animations/Rocket.gif";
-export default function RecourForm({refe, setFormToggle}) {  
+
+export default function RecourForm({setFormToggle, currentModule}) {  
     const [formData, setFormData] = useState({
+        module: '',
         raison: '',
         justificatif: ''
     }); 
     const [submitting, setSubmitting] = useState(false);
     const [isDragOver, setIsDragOver] = useState(false);
+    const formRef = useRef(null);
 
     const handleDragEnter = (e) => {
         e.preventDefault();
@@ -43,38 +46,56 @@ export default function RecourForm({refe, setFormToggle}) {
         /* 
         
         */
+       //this is just temp work until backend arrives
         if(formData.raison !== "") {
             setSubmitting(true);
+            console.log(formData);
             setTimeout(() => {
                 setSubmitting(false);
                 closeForm();
-                setFormData({
-                    raison: '',
-                    justificatif: ''
-                })
             }, 1000); // wait for 3 seconds before submitting the form 
-            console.log(formData);
         }
     }
-    const closeForm = () => setFormToggle(false)
+    const closeForm = () => {
+        setFormData({
+            module: '',
+            raison: '',
+            justificatif: ''
+        })
+        setFormToggle(false);
+    }
+
     const handleChange = (event) => {
         if (event.target.name === "justificatif") {
-            const file = event.target.files[0];
+            let file = event.target.files[0];
             if(file.type === "application/pdf") {
                 setFormData({
                     ...formData,
                     justificatif: file
                 });   
+                file = null;
             }
         } else {
             setFormData({
                 ...formData,
+                module: currentModule,
                 [event.target.name]: event.target.value
             });
         }
     }
+    useEffect(() => {
+        const removeForm = (event) => {
+            if(formRef.current && !formRef.current.contains(event.target)) {
+                closeForm()
+            }
+        }
+        document.addEventListener('mousedown', removeForm);
+        return () => {
+            document.removeEventListener('mousedown', removeForm);
+        };
+    }, []);
     return (
-        <form onSubmit={handleSubmit} ref={refe} className={submitting ? "submitting": ""}>
+        <form onSubmit={handleSubmit} ref={formRef} className={submitting ? "submitting": ""}>
             <img src={waitIcon} className={submitting ? "active": ""}/>
             <div className="form-header">
                 <h2>Formulaire de recours</h2>
