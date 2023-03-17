@@ -52,7 +52,7 @@ export default function ModulsTable({modules}) {
                 </table>
             </div>
             <div className={`recour-form${formToggle ? " active" : ''}`} >
-                <RecourForm refe={formRef}/>
+                <RecourForm refe={formRef} setFormToggle = {setFormToggle}/>
             </div>
         </>
     )
