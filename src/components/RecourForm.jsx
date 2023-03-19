@@ -15,6 +15,7 @@ export default function RecourForm({setFormToggle, currentModule}) {
     const [isDragOver, setIsDragOver] = useState(false);
     const formRef = useRef(null);
 
+    // Drag files Into Form Functions 
     const handleDragEnter = (e) => {
         e.preventDefault();
         setIsDragOver(true);
@@ -39,7 +40,6 @@ export default function RecourForm({setFormToggle, currentModule}) {
         }
     };
 
-
     const handleSubmit = (event) => {
         event.preventDefault();
         //send the data to backend here 
@@ -56,15 +56,6 @@ export default function RecourForm({setFormToggle, currentModule}) {
             }, 1000); // wait for 3 seconds before submitting the form 
         }
     }
-    const closeForm = () => {
-        setFormData({
-            module: '',
-            raison: '',
-            justificatif: ''
-        })
-        setFormToggle(false);
-    }
-
     const handleChange = (event) => {
         if (event.target.name === "justificatif") {
             let file = event.target.files[0];
@@ -82,6 +73,14 @@ export default function RecourForm({setFormToggle, currentModule}) {
                 [event.target.name]: event.target.value
             });
         }
+    }
+    const closeForm = () => {
+        setFormData({
+            module: '',
+            raison: '',
+            justificatif: ''
+        })
+        setFormToggle(false);
     }
     useEffect(() => {
         const removeForm = (event) => {

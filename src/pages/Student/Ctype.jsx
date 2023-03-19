@@ -28,7 +28,7 @@ export default function Ctype({setModule, student}) {
                 <SearchIcon />
                 <input type="text" placeholder="recherche par module" onChange={handleSearchChange}/>
             </div>
-            <ModulsTable modules={filteredModules}/>
+            <ModulsTable modules={filteredModules} />
         </>
     )
     }

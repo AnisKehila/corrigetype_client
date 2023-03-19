@@ -26,7 +26,7 @@
             "note": 4
         },
         {
-            "module": "UI/UX",
+            "module": "UI-UX",
             "prof": "Djamel Belkacemi",
             "hasRecour": false,
             "note": 18
@@ -56,7 +56,7 @@
             "prof": "Youcef Yehiatene",
             "submission_date": "06-03-2023",
             "objection_text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, dolorum dolores. Voluptates totam ipsa rerum placeat quod ab incidunt neque, culpa eligendi ratione vitae dolore id? Laborum explicabo excepturi odio!",
-            "justificatif": "./example.pdf",
+            "justificatif": "example.pdf",
             "etat": "En étude",
             "old_note": "15",
             "new_note": ""
@@ -104,6 +104,6 @@
     ],
     "notifications" : [
         {"id": 0, "content" : "Youcef Yehiatene a réviser la note du module development web!"},
-        {"id": 1, "content" : "Youcef Yehiatene a réviser la note du module development web!"}
+        {"id": 1, "content" : "Djamel Belkacemi a réviser la note du module UI/UX!"}
     ]
 }

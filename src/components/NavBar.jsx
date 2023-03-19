@@ -19,9 +19,8 @@ export default function NavBar({user, module , notifications}) {
     },[notifRef]);
 
     const numOfNotif = () => {
-        let i = 0;
-        notifications.map(item => i++);
-        return i
+        let count = notifications.length;
+        return count
     }
     return (
         <nav>

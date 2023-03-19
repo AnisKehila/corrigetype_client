@@ -22,6 +22,7 @@ ul {
 }
 a {
     text-decoration: none;
+    color: inherit;
 }
 #root {
     display: flex;
@@ -88,7 +89,7 @@ a {
             }
         }
     }
-    .content {
+    > .content {
         padding: 32px;
         width: 80%;
         max-width: 1280px;
@@ -157,6 +158,7 @@ a {
                 overflow: hidden;
                 transition: .4s;
                 height: 0;
+                z-index: 2;
                 li {
                     border-bottom: 1px solid $accent_secondary;
                     height: 0;
@@ -276,6 +278,138 @@ a {
                     }
                 }
             }
+        }
+        .recour-row {
+
+        }
+        .recour-row.opened {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding: 32px;
+            gap: 10px;            
+            background: #FFFFFF;
+            box-shadow: 0px 0px 10px rgba(132, 132, 132, 0.15);
+            border-radius: 16px;
+            margin-bottom: 24px;
+            position: relative;
+            span.details {
+                display: none;
+            }
+            span.moins {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 6px 12px;
+                gap: 8px;
+                color: #ED2121;
+                cursor: pointer;
+                font-weight: 600;
+            }
+            .content {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                .col {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    flex: 1;
+                    div.objection {
+                        flex-direction: column;
+                    }
+                    div.etat {
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                        position: absolute;
+                        top: 75%;
+                        .icon {
+                            display: flex;
+                            padding: 12px;
+                            border-radius: 50%;
+                        }
+                        .txt {
+                            display: flex;
+                            flex-direction: column;
+                            .txt-bold {
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                    .etat.en {
+                        color: #FF7F37;
+                        .icon {
+                            background-color: #FFECE1;
+                            svg  {
+                                path {
+                                    fill: #FF7F37
+                                }
+                            }
+                        }
+                    }
+                    .etat.favorable {
+                        color: #3AC922;
+                        .icon {
+                            background-color: #E6FFE2;
+                            svg  {
+                                path {
+                                    fill: #3AC922
+                                }
+                            }
+                        }
+                    }
+                    .etat.defavorable {
+                        color: #FF3030;
+                        .icon {
+                            background-color: #FFF2F2;
+                            svg  {
+                                path {
+                                    fill: #FF3030
+                                }
+                            }
+                        }
+                    }
+                    div.justificatif {
+                        flex-direction: column;
+                        .download-container {
+                            .txt {
+                                display: flex;
+                                align-items: center;
+                                gap: 20px;
+                                color: $text_secondary;
+                                font-weight: 600;
+                            }
+                            border-radius: 8px;
+                            padding: 8px;
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+                            justify-content: space-between;
+                            .download-icon {
+                                transform: rotate(180deg);
+                            }
+                            transition: .3s;
+                            &:hover {
+                                background-color: #ECF0FF;
+                            }
+                        }
+                    }
+                    >div {
+                        display: flex;
+                        gap: 12px;
+                        span.property {
+                            text-transform: uppercase;
+                            color: $text_primary;
+                        }
+                        span.value {
+                            font-weight: 500;
+                            color: $text_secondary;
+                        }
+                    }
+                }
+            }        
         }
     }
     .recour-form {

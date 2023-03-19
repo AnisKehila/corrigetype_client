@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom";
 import { ReactComponent as ArrowIcon } from "../assets/icons/left_to_right_arrow.svg"
 import RecourForm from "./RecourForm"
 export default function ModulsTable({modules}) {
@@ -31,7 +32,7 @@ export default function ModulsTable({modules}) {
                                     <td>{item.note}</td>
                                     <td className="consult">
                                         <span>
-                                            Consulter
+                                            <Link to={'/consulter/' + item.module} >Consulter</Link>
                                         </span>
                                     </td>
                                     <td className={`recourBtn ${item.hasRecour ? '' : 'active'}`} >

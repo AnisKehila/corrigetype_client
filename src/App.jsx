@@ -10,7 +10,9 @@ function App() {
   return (
     <Routes>
       <Route element={<SideBar links= {sideBarHandler(User)}/>}>
-        <Route path='/' element={<Home user={User} isLogged={isLogged}/>}/>
+        <Route exact path='/' element={<Home user={User} isLogged={isLogged}/>}>
+          <Route path='consulter/:module' element={<Home user={User} isLogged={isLogged}/>} />
+        </Route>
         <Route path='/recours' element={<Home user={User} isLogged={isLogged}/>}/>
       </Route>
       <Route path='*' element={<NotFound />}/>
