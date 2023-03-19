@@ -3,11 +3,12 @@ import { ReactComponent as DetailsIcon } from "../assets/icons/expand_arrow.svg"
 import { ReactComponent as EtatIcon } from "../assets/icons/exclamation.svg"
 import { ReactComponent as NoteIcon } from "../assets/icons/note.svg"
 import { ReactComponent as UploadIcon } from "../assets/icons/upload.svg"
+import { useState } from "react"
 export default function RecourItem({module, prof, subDate, Objection, justificatif, etat, oldNote, newNote}) {
+    const [open, setOpen] = useState(false);
     return (
-        <>
-            <span className="moins">moins <MoinsIcon /></span>
-            <span className="details">Détails <DetailsIcon /></span>
+        <div className={`recour-row ${open ? "opened" : ''}`}>
+            <span className="moins" onClick={() => setOpen(false)}>moins <MoinsIcon /></span>
             <div className="content">
                 <div className="col">
                     <div className="module">
@@ -37,11 +38,11 @@ export default function RecourItem({module, prof, subDate, Objection, justificat
                     </div>
                 </div>
                 <div className="col">
-                    <div className="old-mark">
+                    <div className="mark">
                         <span className="property">Marque ancienne:</span>
                         <span className="value">{oldNote}</span>
                         {   newNote == '' ? null :
-                            <span className="new-note">Nouvelle marque: <span>{newNote}</span></span>
+                            <span className="new-note">NOUVELLE MARQUE: <span>{newNote}</span></span>
                         }
                     </div>
 
@@ -61,6 +62,7 @@ export default function RecourItem({module, prof, subDate, Objection, justificat
                     </div>
                 </div>
             </div>
-        </>
+            <span className="details" onClick={() => setOpen(true)}>Détails <DetailsIcon /></span>
+        </div>
     )
 }

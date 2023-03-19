@@ -6,9 +6,9 @@ export default function Recour() {
         <>
             {
                 recours.map(recour => 
-                    <div key={Math.random()} className="recour-row opened">
                         <RecourItem
                             //in the key we can add the id when we get the db data  
+                            key={Math.random()}
                             module={recour.module}
                             prof={recour.prof}
                             subDate={recour.submission_date}
@@ -18,7 +18,6 @@ export default function Recour() {
                             oldNote={recour.old_note}
                             newNote={recour.new_note}
                         />
-                    </div>
                 )
             }
         </>
