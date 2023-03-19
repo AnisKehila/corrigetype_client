@@ -343,6 +343,7 @@ a {
                         .txt {
                             display: flex;
                             flex-direction: column;
+                            gap: 0;
                             .txt-bold {
                                 font-weight: 700;
                             }
