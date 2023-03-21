@@ -37,7 +37,7 @@ export default function NavBar({user, module , notifications}) {
                 </span>
                 <span className="user">
                     <UserIcon />
-                    {user}
+                    <span className='user-name'>{user}</span>
                 </span>
             </div>
             <ul className={`notif-container ${notifToggle ? 'active' : ''}`} ref={notifRef}>
