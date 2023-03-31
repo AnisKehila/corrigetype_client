@@ -322,15 +322,24 @@ a {
                 }
             }
         }
-        .recour-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        .card {
             padding: 32px;
             background: #FFFFFF;
             box-shadow: 0px 0px 10px rgba(132, 132, 132, 0.15);
             border-radius: 16px;
+            color: $text_primary;
+            h2 {
+                font-weight: 700;
+                font-size: 20px;
+                color: $text_secondary;
+            }
+
+        }
+        .recour-row {
             margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             span.moins {
                 display: none;
             }
@@ -426,75 +435,169 @@ a {
                     }
                 }
             }
-        }
-        .recour-row.opened {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 10px;            
-            position: relative;
-            span.details {
-                display: none;
-            }
-            span.moins {
+            &.opened {
                 display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                padding: 6px 12px;
-                gap: 8px;
-                color: #ED2121;
-                cursor: pointer;
-                font-weight: 600;
-            }
-            .content {
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                .col {
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 10px;            
+                position: relative;
+                span.details {
+                    display: none;
+                }
+                span.moins {
                     display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 6px 12px;
                     gap: 8px;
-                    flex: 1;
-                    div.objection {
+                    color: #ED2121;
+                    cursor: pointer;
+                    font-weight: 600;
+                }
+                .content {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    .col {
+                        display: flex;
                         flex-direction: column;
-                    }
-                    div.etat {
-                        position: absolute;
-                        top: 75%;
-                    }
-                    div.justificatif {
-                        flex-direction: column;
-                        width: 100%;
-                        .download-container {
-                            .txt {
+                        align-items: flex-start;
+                        gap: 8px;
+                        flex: 1;
+                        div.objection {
+                            flex-direction: column;
+                        }
+                        div.etat {
+                            position: absolute;
+                            top: 75%;
+                        }
+                        div.justificatif {
+                            flex-direction: column;
+                            width: 100%;
+                            .download-container {
+                                .txt {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 20px;
+                                    color: $text_secondary;
+                                    font-weight: 600;
+                                }
+                                border-radius: 8px;
+                                padding: 8px;
                                 display: flex;
                                 align-items: center;
-                                gap: 20px;
-                                color: $text_secondary;
-                                font-weight: 600;
-                            }
-                            border-radius: 8px;
-                            padding: 8px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-between;
-                            .download-icon {
-                                transform: rotate(180deg);
-                            }
-                            transition: .3s;
-                            &:hover {
-                                background-color: #ECF0FF;
+                                justify-content: space-between;
+                                transition: .3s;
+                                &:hover {
+                                    background-color: #ECF0FF;
+                                }
                             }
                         }
-                    }
-                    >div {
-                        display: flex;
-                        
+                        >div {
+                            display: flex;
+                            
+                        }
                     }
                 }
             }        
+        }
+        .info-card {
+            gap: 32px !important;
+            align-items: flex-start !important;
+            .etat {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                .txt {
+                    display: flex;
+                    flex-direction: column;
+                    .txt-bold {
+                        font-weight: 700;
+                    }
+                }
+                .icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 12px;
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;                
+                }
+                &.filled {
+                    color: #3AC922;
+                    .icon {
+                        background: #E6FFE2;
+                        svg {
+                            path {
+                                fill: #3AC922;
+                            }
+                        }
+                    }
+                }
+                &.non-filled {
+                    color: #FF7F37;
+                    .icon {
+                        background: #FFECE1;
+                        svg {
+                            path {
+                                fill: #FF7F37;
+                            }
+                        }
+                    }
+                }
+            }
+            .content {
+                width: 100%;
+            }
+        }
+        .timing {
+            .content {
+                div {
+                    h3 {
+                        margin-top: 48px;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 20px;
+                        letter-spacing: 0.02em;
+                        text-transform: uppercase;
+                    }
+                    .dates {
+                        display: flex;
+                        margin-top: 32px;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 24px;
+                        .date {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            width: 237.5px;
+                            gap: 20px;
+                            .icon {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                padding: 12px;
+                                width: 48px;
+                                height: 48px;
+                                border-radius: 50%;
+                                background: #F8F8F8;
+                            }
+                            .txt {
+                                display: flex;
+                                flex-direction: column;
+                                span:last-child {
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    color: $text_secondary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     .recour-form {

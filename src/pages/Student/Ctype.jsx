@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ReactComponent as SearchIcon } from "../../assets/icons/search.svg";
 import ModulsTable from "../../components/ModulsTable";
 
-export default function Ctype({setModule, student}) {
+export default function Ctype({ student }) {
     const [filteredModules, setFilteredModules] = useState(student.modules);
 
     const handleSearchChange = (event) => {

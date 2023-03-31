@@ -2,12 +2,12 @@ import { ReactComponent as MoinsIcon } from "../assets/icons/contract_arrow.svg"
 import { ReactComponent as DetailsIcon } from "../assets/icons/expand_arrow.svg"
 import { ReactComponent as EtatIcon } from "../assets/icons/exclamation.svg"
 import { ReactComponent as NoteIcon } from "../assets/icons/note.svg"
-import { ReactComponent as UploadIcon } from "../assets/icons/upload.svg"
+import { ReactComponent as DownloadIcon } from "../assets/icons/download.svg"
 import { useState } from "react"
 export default function RecourItem({module, prof, subDate, Objection, justificatif, etat, oldNote, newNote}) {
     const [open, setOpen] = useState(false);
     return (
-        <div className={`recour-row ${open ? "opened" : ''}`}>
+        <div className={`recour-row card ${open ? "opened" : ''}`}>
             <span className="moins" onClick={() => setOpen(false)}>moins <MoinsIcon /></span>
             <div className="content">
                 <div className="col">
@@ -57,7 +57,7 @@ export default function RecourItem({module, prof, subDate, Objection, justificat
                                 <NoteIcon />
                                 <span>Justificatif.pdf</span>
                             </div>
-                            <span className="download-icon"><UploadIcon /></span>
+                            <span className="download-icon"><DownloadIcon /></span>
                         </a>
                     </div>
                 </div>
