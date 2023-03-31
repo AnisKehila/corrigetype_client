@@ -1,14 +1,18 @@
 import { useEffect, useState } from "react"
 import { NavLink, useLocation } from "react-router-dom"
-import { ReactComponent as NoteIcon } from "../assets/icons/note.svg"
+import { ReactComponent as NoteIcon } from "../../assets/icons/note.svg"
+import { ReactComponent as HomeIcon } from "../../assets/icons/home.svg"
+import { ReactComponent as ClassesIcon } from "../../assets/icons/users.svg"
 
 function Icon({iconName}) {
     switch (iconName) {
         case 'NoteIcon':
             return <NoteIcon />
-    
+        case 'Home':
+            return <HomeIcon />
+        case 'Persones':
+            return <ClassesIcon />
     }
-    
 }
 export default function SideBarLink({link}) {
     const location = useLocation();

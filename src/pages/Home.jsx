@@ -1,18 +1,17 @@
 import NotFound from "./NotFound"
-import Admin from "./Admin"
 import { index as StudentIndex } from "./Student/index"
-import Teacher from "./Teacher"
+import { index as TeacherIndex } from "./Teacher/index"
 import { USER_TYPES } from '../data/Consts'
 
 function Home({user, isLogged}) {
     if(!isLogged) return <NotFound />
     switch (user) {
     case USER_TYPES.ADMIN:
-        return <Admin />
+        return 
     case USER_TYPES.STUDENT:
         return <StudentIndex />
     case USER_TYPES.TEACHER:
-        return <Teacher />
+        return <TeacherIndex />
     default:
         return <NotFound />
     }

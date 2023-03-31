@@ -1,5 +1,5 @@
 import { Outlet } from "react-router"
-import Logo from "./Logo"
+import Logo from "../Logo"
 import SideBarLink from "./SideBarLink"
 export default function SideBar({links}) {
     return (

@@ -104,6 +104,7 @@
     ],
     "notifications" : [
         {"id": 0, "content" : "Youcef Yehiatene a réviser la note du module development web!"},
-        {"id": 1, "content" : "Djamel Belkacemi a réviser la note du module UI/UX!"}
+        {"id": 1, "content" : "Djamel Belkacemi a réviser la note du module UI/UX!"},
+        {"id": 2, "content" : "Righé a refusé ton recour a la raison du \"zero ci zero\"!"}
     ]
 }

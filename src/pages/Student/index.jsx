@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom"
 import Ctype from "./Ctype"
 import Recour from './Recour'
-import NavBar from "../../components/NavBar"
+import NavBar from "../../components/navbar/NavBar"
 import student from '../../data/student.json'
 import { useState } from "react"
 import Consulte from "./Consulte"
