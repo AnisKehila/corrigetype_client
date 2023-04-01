@@ -5,7 +5,7 @@ import SideBar from './components/sidebar/SideBar'
 import Home from './pages/Home.jsx'
 import { sideBarHandler } from './utils/sideBarHandler'
 function App() {
-  const User = USER_TYPES.STUDENT;
+  const User = USER_TYPES.TEACHER;
   const isLogged = true;
   return (
     <Routes>

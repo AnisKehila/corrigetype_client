@@ -328,6 +328,40 @@ a {
                     }
                 }
             }
+            .cards {
+                display: flex;
+                gap: 32px;
+                .card {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 13px;
+                    .circle {
+                        width: 120px;
+                        height: 120px;
+                        background: conic-gradient(#6284FD var(--ratio) ,#ECF0FF 0);
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+                        margin-top: 13px;
+                        .value {
+                            font-weight: 700;
+                            font-size: 18px;
+                            color: #6284FD;
+                            background-color: #FFFF;
+                            border-radius: 50%;
+                            width: 80px;
+                            height: 80px;
+                            display: grid;
+                            place-items: center;
+                        }
+                    }
+                }
+            }
             .card {
                 padding: 32px;
                 background: #FFFFFF;
