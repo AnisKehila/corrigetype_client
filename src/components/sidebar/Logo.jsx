@@ -1,4 +1,4 @@
-import {ReactComponent as LogoImg} from '../assets/icons/Logo/logo.svg'
+import {ReactComponent as LogoImg} from '../../assets/icons/Logo/logo.svg'
 export default function Logo() {
     return (
         <div className='logo'>

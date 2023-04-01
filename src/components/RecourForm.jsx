@@ -105,7 +105,7 @@ export default function RecourForm({setFormToggle, currentModule}) {
                     Raison
                 </label>
                 <ResizeIcon id='textresize' />
-                <textarea name="raison" onChange={handleChange} value={formData.raison} required>
+                <textarea name="raison" onChange={handleChange} value={formData.raison} placeholder="Entré ta raison..." required>
                 </textarea>
                 <label htmlFor="justificatif" className="file-label">
                     <div className="justficaif">
