@@ -2,6 +2,7 @@ import { useState,useEffect } from "react"
 import { useParams } from "react-router"
 import { ReactComponent as EtatIcon } from "../../assets/icons/exclamation.svg"
 import { ReactComponent as DateIcon } from "../../assets/icons/date.svg"
+import Date from "../../components/Date"
 import studentData from "../../data/student.json"
 
 export default function Consulte({setModule}) {
@@ -115,7 +116,7 @@ export default function Consulte({setModule}) {
                                 06 - 03 - 2023
                             </span>
                         </div>
-
+                        
                         <div>
                             <span className="property">
                                 Moyenne de classe:
@@ -135,63 +136,15 @@ export default function Consulte({setModule}) {
                     <div>
                         <h3>téléchargement de corrigé type :</h3>
                         <div className="dates">
-                            <div className="date">
-                                <div className="icon">
-                                    <DateIcon />
-                                </div>
-                                <div className="txt">
-                                    <span>
-                                        06 - 03 - 2023  
-                                    </span>
-                                    <span>
-                                        date de début
-                                    </span>
-                                </div>
-                            </div>
-                            <div className="date">
-                                <div className="icon">
-                                    <DateIcon />
-                                </div>
-                                <div className="txt">
-                                    <span>
-                                        06 - 03 - 2023
-                                    </span>
-                                    <span>
-                                        date d'échéance
-                                    </span>
-                                </div>
-                            </div>
+                            <Date date="06 - 03 - 2023 " content="date de début" />
+                            <Date date="06 - 03 - 2023 " content="date d'échéance" />
                         </div>
                     </div>
                     <div>
-                    <h3>envoi de recours :</h3>
+                        <h3>envoi de recours :</h3>
                         <div className="dates ">
-                            <div className="date">
-                                <div className="icon">
-                                    <DateIcon />
-                                </div>
-                                <div className="txt">
-                                    <span>
-                                        06 - 03 - 2023  
-                                    </span>
-                                    <span>
-                                        date de début
-                                    </span>
-                                </div>
-                            </div>
-                            <div className="date">
-                                <div className="icon">
-                                    <DateIcon />
-                                </div>
-                                <div className="txt">
-                                    <span>
-                                        06 - 03 - 2023
-                                    </span>
-                                    <span>
-                                        date d'échéance
-                                    </span>
-                                </div>
-                            </div>
+                            <Date date="06 - 03 - 2023 " content="date de début" />
+                            <Date date="06 - 03 - 2023 " content="date d'échéance" />
                         </div>
                     </div>
                 </div>
