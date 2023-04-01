@@ -27,7 +27,7 @@ export default function NavBar({user, module , notifications}) {
                     </span>
                 </span>
                 <span className="user" ref={userRef} onClick={() => setUserParamsToggle(true)}>
-                    {user}
+                    <span className='user-name'>{user}</span>
                     <UserDetails />
                     <UserParams 
                         userRef={userRef}
