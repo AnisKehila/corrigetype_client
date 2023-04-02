@@ -7,6 +7,7 @@ export default function BoardTable() {
 
   const modules = data.modules;
   const moduleCount = modules.length;
+  const curveProps = [];
   let filledModules = 0;
   let totalRecours = 0;
   let revisedRecours = 0;
@@ -17,6 +18,7 @@ export default function BoardTable() {
       totalRecours += module.numberOfRecours;
       revisedRecours += module.revisedRecours;
       positiveRecours += module.positiveRecours;
+      curveProps.push({property: module.name, propertyValue: module.numberOfRecours})
     }
   });
   const filledModulesRatio = Math.round((filledModules * 100 / moduleCount) * 10) / 10;
@@ -52,7 +54,7 @@ export default function BoardTable() {
             <span className="ratio"><PercentIcon /></span>
           </div>
         </div>
-        <Curve properties={modules} valuesRange={[0, 5, 10, 20, 50, 100]}/>
+        <Curve properties={curveProps} valuesRange={["0", "5", "10", "20", "50", "+100"]}/>
       </div>
     </>
   )

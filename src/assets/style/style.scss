@@ -435,6 +435,69 @@ a {
                         }
                     }
                 }
+                .curve {
+                    display: flex;
+                    overflow-y: auto;
+                    color: $text_secondary;
+                    margin-top: 64px;
+                    gap: 47px;
+                    align-items: end;
+                    justify-content: stretch;
+                    .values {
+                        display: flex;
+                        flex-direction: column-reverse;
+                        gap: 13px;
+                        margin-bottom: 85px;
+                    }
+                    .properties {
+                        display: flex;
+                        align-self: stretch;
+                        gap: 40px;
+                        align-items: end;
+                        .property {
+                            width: 80px;
+                            height: 100%;
+                            display: flex;
+                            justify-content: flex-end;
+                            flex-direction: column;
+                            align-items: center;
+                            font-size: 14px;
+                            position: relative;
+                            &:not(:last-child) {
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    top: -85px;
+                                    left: 125%;
+                                    height: 100%;
+                                    width: 1px;
+                                    background-color: #D7D7D7;
+                                }
+                            }
+                            .name {
+                                text-align: center;
+                                padding-top: 45px;
+                                min-height: 85px;
+                            }
+                            .value {
+                                position: relative;
+                                height: 100%;
+
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    height: 100%;
+                                    width: 40px;
+                                    border-radius: 4px 4px 0 0;
+                                    background-color: #6284FD;
+                                }
+                            }
+                        }
+                    }
+                }
             }
             .recour-row {
                 margin-bottom: 24px;
