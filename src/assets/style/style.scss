@@ -329,35 +329,59 @@ a {
                 }
             }
             .cards {
-                display: flex;
+                display: grid;
+                width: 100%;
+                grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
                 gap: 32px;
                 .card {
-                    flex: 1;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
                     gap: 13px;
-                    .circle {
-                        width: 120px;
-                        height: 120px;
-                        background: conic-gradient(#6284FD var(--ratio) ,#ECF0FF 0);
-                        border-radius: 50%;
+                    .card-header {
                         display: flex;
                         align-items: center;
-                        justify-content: center;
-                        position: relative;
-                        margin-top: 13px;
-                        .value {
+                        gap: 13px;
+                        .property {
                             font-weight: 700;
                             font-size: 18px;
-                            color: #6284FD;
-                            background-color: #FFFF;
-                            border-radius: 50%;
-                            width: 80px;
-                            height: 80px;
-                            display: grid;
-                            place-items: center;
+                            color: $text_secondary;
+                        }
+                        .value {
+                            font-size: 18px;
+                            color: $text_secondary;
+                        }
+                    }
+                    .circle {
+                        position: relative;
+                        canvas {
+                            max-width: 120px;
+                            max-height: 120px;
+                        }
+                        span.value {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -36.25%);
+                            font-weight: 700;
+                            font-size: 18px;
+                        }
+                    }
+                    .card-footer {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 12px;
+                        .key {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+                            .color {
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 50%;
+                            }
                         }
                     }
                 }
@@ -373,7 +397,44 @@ a {
                     font-size: 20px;
                     color: $text_secondary;
                 }
-
+            }
+            .curve-card {
+                padding: 16px 24px;
+                margin-top: 32px;
+                .card-header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    h3 {
+                        font-weight: 700;
+                        font-size: 20px;
+                    }
+                    .icons {
+                        display: flex;
+                        gap: 8px;
+                    }
+                    span {
+                        padding: 12px;
+                        gap: 8px;
+                        width: 38.22px;
+                        height: 40px;
+                        border-radius: 8px;              
+                        cursor: pointer;
+                        svg {
+                            path {
+                                fill: $text_secondary
+                            }
+                        }          
+                        &.active {
+                            background-color: #96ADFF;
+                            svg {
+                                path {
+                                    fill: #FFF
+                                }
+                            }
+                        }
+                    }
+                }
             }
             .recour-row {
                 margin-bottom: 24px;

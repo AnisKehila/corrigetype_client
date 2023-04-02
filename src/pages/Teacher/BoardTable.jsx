@@ -1,26 +1,58 @@
+import data from "../../data/teacher.json"
 import RatioCard from "../../components/RatioCard"
+import Curve from "../../components/Curve";
+import { ReactComponent as PercentIcon } from "../../assets/icons/percent.svg";
+import { ReactComponent as HashtagIcon } from "../../assets/icons/hashtag.svg";
 export default function BoardTable() {
+
+  const modules = data.modules;
+  const moduleCount = modules.length;
+  let filledModules = 0;
+  let totalRecours = 0;
+  let revisedRecours = 0;
+  let positiveRecours = 0;
+  modules.map(module => {
+    if (module.filled) {
+      filledModules++;
+      totalRecours += module.numberOfRecours;
+      revisedRecours += module.revisedRecours;
+      positiveRecours += module.positiveRecours;
+    }
+  });
+  const filledModulesRatio = Math.round((filledModules * 100 / moduleCount) * 10) / 10;
+  const revisedModulesRatio = Math.round((revisedRecours * 100 / totalRecours) * 10) / 10;
+  const positiveModulesRatio = Math.round((positiveRecours * 100 / revisedRecours) * 10) / 10;
   return (
     <>
       <div className="cards">
         <RatioCard 
           titleProp="Nombre de modules:"
-          titleValue="6"
-          ratio="90"
-          keys={["Remplie", "Non Remplies"]}
+          titleValue={moduleCount}
+          ratio={filledModulesRatio}
+          keys={{active: {text: "Remplie", color: "#6284FD"}, nonActive: {text: "Non Remplie", color: "#ECF0FF"}}}
         />
         <RatioCard 
-          titleProp="Nombre de modules:"
-          titleValue="6"
-          ratio="90"
-          keys={["Remplie", "Non Remplies"]}
+          titleProp="Nombre de recours:"
+          titleValue={totalRecours}
+          ratio={revisedModulesRatio}
+          keys={{active: {text: "Revu", color: "#6284FD"}, nonActive: {text: "En attente", color: "#ECF0FF"}}}
         />
         <RatioCard 
-          titleProp="Nombre de modules:"
-          titleValue="6"
-          ratio="90"
-          keys={["Remplie", "Non Remplies"]}
+          titleProp="Recours révisés:"
+          titleValue={revisedRecours}
+          ratio={positiveModulesRatio}
+          keys={{active: {text: "Favorable", color: "#3AC922"}, nonActive: {text: "Défavorable", color: "#F37B38"}}}
         />
+      </div>
+      <div className="curve-card card">
+        <div className="card-header">
+          <h3>Recours/Module</h3>
+          <div className="icons">
+            <span className="value active"><HashtagIcon /></span>
+            <span className="ratio"><PercentIcon /></span>
+          </div>
+        </div>
+        <Curve properties={modules} valuesRange={[0, 5, 10, 20, 50, 100]}/>
       </div>
     </>
   )

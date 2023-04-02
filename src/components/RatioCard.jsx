@@ -9,10 +9,17 @@ export default function RatioCard({titleProp, titleValue, ratio, keys}) {
                 <span className="value">
                     {titleValue}
                 </span>
-            </div>
-            <Circle ratio={ratio}/>
-            <div className="keys">
-                {keys.map(key => <span className="key" key={key}>{key}</span>)}
+            </div>            
+            <Circle ratio={ratio} activeColor={keys.active.color}  nonActiveColor={keys.nonActive.color}/>
+            <div className="card-footer">
+                <span className="key">
+                    <span style={{backgroundColor: keys.active.color}} className="color"></span>
+                    <span className="txt">{keys.active.text}</span>
+                </span>
+                <span className="key">
+                    <span style={{backgroundColor: keys.nonActive.color}} className="color"></span>
+                    <span className="txt">{keys.nonActive.text}</span>
+                </span>
             </div>
         </div>
     )
