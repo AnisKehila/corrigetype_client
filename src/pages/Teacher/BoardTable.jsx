@@ -3,8 +3,10 @@ import RatioCard from "../../components/RatioCard"
 import Curve from "../../components/Curve";
 import { ReactComponent as PercentIcon } from "../../assets/icons/percent.svg";
 import { ReactComponent as HashtagIcon } from "../../assets/icons/hashtag.svg";
+import { ReactComponent as NoteIcon } from "../../assets/icons/note.svg";
+import { ReactComponent as ArrowIcon } from "../../assets/icons/duplicate_arrows.svg";
+import { Link } from "react-router-dom";
 export default function BoardTable() {
-
   const modules = data.modules;
   const moduleCount = modules.length;
   const curveProps = [];
@@ -54,7 +56,38 @@ export default function BoardTable() {
             <span className="ratio"><PercentIcon /></span>
           </div>
         </div>
-        <Curve properties={curveProps} valuesRange={["0", "5", "10", "20", "50", "+100"]}/>
+        <Curve properties={curveProps} valuesRange={[0, 5, 10, 20, 50, 80]}/>
+      </div>
+      <div className="card unfinished-modules">
+        <h3>Modules à finir</h3>
+        <ul>
+          {
+            modules.map(module =>
+              !module.filled && 
+              <li key={module.name}>
+                <div>
+                  <div className="icon">
+                    <NoteIcon />
+                  </div>
+                  <div className="content">
+                    <div className="module-name">
+                      {module.name}
+                    </div>
+                    <div className="students-num">
+                      ({module.studentsNumber} Êtudiants)
+                    </div>
+                  </div>
+                </div>
+                <Link>
+                  <span>
+                    Voir la class
+                  </span>
+                    <ArrowIcon />
+                </Link>
+              </li>
+            )
+          }
+        </ul>
       </div>
     </>
   )

@@ -34,9 +34,9 @@
             "speciality": "System Informatique",
             "filled": true,
             "studentsNumber": 27,
-            "numberOfRecours": 7,
-            "revisedRecours": 3,
-            "positiveRecours": 1
+            "numberOfRecours": 42,
+            "revisedRecours": 17,
+            "positiveRecours": 8
         },
         {
             "name": "Data Structures",
@@ -51,16 +51,19 @@
             "speciality": "System Informatique",
             "filled": true,
             "studentsNumber": 29,
-            "numberOfRecours": 4,
-            "revisedRecours": 3,
-            "positiveRecours": 1
+            "numberOfRecours": 112,
+            "revisedRecours": 94,
+            "positiveRecours": 66
         },
         {
             "name": "Web Design",
             "level": "licence 2",
             "speciality": "System Informatique",
-            "filled": false,
-            "studentsNumber": 35
+            "filled": true,
+            "studentsNumber": 30,
+            "numberOfRecours": 68,
+            "revisedRecours": 58,
+            "positiveRecours": 33
         },
         {
             "name": "Responsive Web Design",
