@@ -11,13 +11,13 @@ export function index() {
     const [pageTitle, setPageTitle] = useState();
     const location = useLocation().pathname;
     return (
-            <div className="content">
-                <NavBar user={teacher.name} notifications={teacher.notifications} module= {pageTitle}/>
-                <main className="main">
-                    {
-                        location =='/' ? <BoardTable setPageTitle = {setPageTitle}/> : location =='/classes' ? <Classes setPageTitle = {setPageTitle} data= {teacher}/> : location.includes('/classes/') ? <Class setPageTitle = {setPageTitle} data= {teacher}/> : <NotFound />
-                    }
-                </main>
-            </div>
+        <div className="content">
+            <NavBar user={teacher.name} notifications={teacher.notifications} module= {pageTitle}/>
+            <main className="main">
+                {
+                    location =='/' ? <BoardTable setPageTitle = {setPageTitle}/> : location =='/classes' ? <Classes setPageTitle = {setPageTitle} data= {teacher}/> : location.includes('/classes/') ? <Class setPageTitle = {setPageTitle} data= {teacher}/> : <NotFound />
+                }
+            </main>
+        </div>
     )
 }
