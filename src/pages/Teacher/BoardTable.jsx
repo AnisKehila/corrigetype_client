@@ -6,7 +6,11 @@ import { ReactComponent as HashtagIcon } from "../../assets/icons/hashtag.svg";
 import { ReactComponent as NoteIcon } from "../../assets/icons/note.svg";
 import { ReactComponent as ArrowIcon } from "../../assets/icons/duplicate_arrows.svg";
 import { Link } from "react-router-dom";
-export default function BoardTable() {
+import { useEffect } from "react";
+export default function BoardTable({setPageTitle}) {
+  useEffect(() => {
+    setPageTitle('Tableau de bord');
+  })
   const modules = data.modules;
   const moduleCount = modules.length;
   const curveProps = [];
@@ -78,7 +82,7 @@ export default function BoardTable() {
                     </div>
                   </div>
                 </div>
-                <Link>
+                <Link to={`/classes/${module.name}`}>
                   <span>
                     Voir la class
                   </span>

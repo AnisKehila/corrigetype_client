@@ -1,10 +1,8 @@
 import { useState,useEffect } from "react"
 import { useParams } from "react-router"
-import { ReactComponent as EtatIcon } from "../../assets/icons/exclamation.svg"
-import { ReactComponent as DateIcon } from "../../assets/icons/date.svg"
 import Date from "../../components/Date"
 import studentData from "../../data/student.json"
-
+import InfoCard from "../../components/InfoCard"
 export default function Consulte({setModule}) {
     const { module } = useParams();
     const [currentModule, setCurrentModule] = useState(null);
@@ -35,99 +33,13 @@ export default function Consulte({setModule}) {
     }
     return (
         <>
-            <div className="info-card recour-row opened card">
-                <h2>informations générales</h2>
-                <div className="etat filled">
-                    {/* Etat des notes needs to be modified when we get db here i've supposed thats the notes are filled*/}
-                    <div className="icon">
-                        <EtatIcon />
-                    </div>
-                    <div className="txt">
-                        <span className="txt-bold">
-                            remplié
-                        </span>
-                        <span>
-                            État Des notes
-                        </span>
-                    </div>
-                </div>
-                <div className="content">
-                    <div className="col">
-                        <div>
-                            <span className="property">
-                                Domain:
-                            </span>
-                            <span className="value">
-                                {studentData.domain}
-                            </span>
-                        </div>
-
-                        <div>
-                            <span className="property">
-                                Spécialité:
-                            </span>
-                            <span className="value">
-                                {studentData.speciality}
-                            </span>
-                        </div>
-
-                        <div>
-                            <span className="property">
-                                Module:
-                            </span>
-                            <span className="value">
-                                {currentModule.module}
-                            </span>
-                        </div>
-
-                        <div>
-                            <span className="property">
-                                Niveau:
-                            </span>
-                            <span className="value">
-                                {studentData.niveau}
-                            </span>
-                        </div>
-                        <div>
-                            <span className="property">
-                                Professor:
-                            </span>
-                            <span className="value">
-                                {currentModule.prof}
-                            </span>
-                        </div>
-                    </div>
-
-                    <div className="col">
-                        <div>
-                            <span className="property">
-                                Nombre d'étudiants:
-                            </span>
-                            <span className="value">
-                                20
-                            </span>
-                        </div>
-
-                        <div>
-                            <span className="property">
-                                Submission Date:
-                            </span>
-                            <span className="value">
-                                06 - 03 - 2023
-                            </span>
-                        </div>
-                        
-                        <div>
-                            <span className="property">
-                                Moyenne de classe:
-                            </span>
-                            <span className="value">
-                                12.37
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <InfoCard 
+                domain= {studentData.domain}
+                speciality= {studentData.speciality}
+                module= {currentModule.module}
+                niveau= {studentData.niveau}
+                prof= {currentModule.prof}
+            />
             <div className="timing card">
                 <h2>
                     Période de temps

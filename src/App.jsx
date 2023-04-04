@@ -14,7 +14,7 @@ function App() {
           <Route path='consulter/:module' element={<Home user={User} isLogged={isLogged}/>} />
           <Route path='recours' element={<Home user={User} isLogged={isLogged}/>}/>
           <Route path='classes' element={<Home user={User} isLogged={isLogged}/>}/>
-          <Route path='classes/:class' element={<Home user={User} isLogged={isLogged}/>}/>
+          <Route path='classes/:classe' element={<Home user={User} isLogged={isLogged}/>}/>
         </Route>
       </Route>
       <Route path='*' element={<NotFound />}/>

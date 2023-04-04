@@ -3,6 +3,7 @@
     "modules": [
         {
             "name": "Web Development",
+            "domain": "Math & Informatqiue",
             "level": "licence 2",
             "speciality": "System Informatique",
             "filled": true,
@@ -13,15 +14,17 @@
         },
         {
             "name": "Analyzes",
+            "domain": "Math & Informatqiue",
             "level": "master 2",
-            "speciality": "System Informatique",
+            "speciality": "Ingénierie des systèmes d'information",
             "filled": false,
             "studentsNumber": 40
         },
         {
-            "name": "UI/UX",
+            "name": "UI-UX",
+            "domain": "Math & Informatqiue",
             "level": "licence 3",
-            "speciality": "System Informatique",
+            "speciality": "Dévelopment web & infographie",
             "filled": true,
             "studentsNumber": 45,
             "numberOfRecours": 21,
@@ -30,6 +33,7 @@
         },
         {
             "name": "Calculus I",
+            "domain": "Math & Informatqiue",
             "level": "master 1",
             "speciality": "System Informatique",
             "filled": true,
@@ -40,6 +44,7 @@
         },
         {
             "name": "Data Structures",
+            "domain": "Math & Informatqiue",
             "level": "licence 1",
             "speciality": "System Informatique",
             "filled": false,
@@ -47,8 +52,9 @@
         },
         {
             "name": "CMS: Wordpress",
+            "domain": "Math & Informatqiue",
             "level": "licence 2",
-            "speciality": "System Informatique",
+            "speciality": "Dévelopment web & infographie",
             "filled": true,
             "studentsNumber": 29,
             "numberOfRecours": 112,
@@ -57,6 +63,7 @@
         },
         {
             "name": "Web Design",
+            "domain": "Math & Informatqiue",
             "level": "licence 2",
             "speciality": "System Informatique",
             "filled": true,
@@ -67,6 +74,7 @@
         },
         {
             "name": "Responsive Web Design",
+            "domain": "Math & Informatqiue",
             "level": "licence 3",
             "speciality": "System Informatique",
             "filled": true,
@@ -77,6 +85,7 @@
         },
         {
             "name": "JavaScript Frameworks",
+            "domain": "Math & Informatqiue",
             "level": "master 1",
             "speciality": "System Informatique",
             "filled": false,
@@ -84,8 +93,6 @@
         }
     ],
     "notifications" : [
-        {"id": 0, "content" : "Youcef Yehiatene a réviser la note du module development web!"},
-        {"id": 1, "content" : "Djamel Belkacemi a réviser la note du module UI/UX!"},
-        {"id": 2, "content" : "Righé a refusé ton recour a la raison du \"zero ci zero\"!"}
+        {"id": 0, "content" : "le calendrier de recours a été déclaré veuillez remplir les modules assignés"}
     ]
 }
