@@ -924,6 +924,44 @@ a {
                     }
                 }
             }
+            .ctype {
+                padding: 0;
+                p {
+                    font-weight: 700;
+                    font-size: 18px;
+                    color: $text_secondary;
+                    padding: 16px;
+                }
+                embed {
+                    height: 703.61px;
+                    width: 100%;
+                }
+            }
+            .upload-ctype {
+                padding: 32px;
+                margin: 56px 0;
+                .card-header {
+                    display: flex;
+                    text-transform: uppercase;
+                    gap: 4px;
+                    .value {
+                        letter-spacing: 0.02em;
+                        color: $text_secondary;
+                    }
+                }
+                .card-body {
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 24px 32px;
+                        width: 100%;
+                        background: #FFEF98;
+                        border-radius: 8px;
+                        list-style: disc;
+                        margin: 16px 0;
+                    }
+                }
+            }
         }
     }
     .recour-form {

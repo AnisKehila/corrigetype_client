@@ -4,17 +4,14 @@ import InfoCard from "../../components/InfoCard"
 import Date from "../../components/Date"
 import { ReactComponent as ArrowIcon } from "../../assets/icons/duplicate_arrows.svg"
 import { Link } from "react-router-dom"
-import CType from "../../components/CType"
-import Marks from "../../components/Marks"
-import Recours from "../../components/Recours"
-
+import Options from "../../components/Options"
+import { USER_TYPES } from "../../data/Consts"
 export default function Class({ data, setPageTitle }) {
     const { classe } = useParams();
     const [currentClass, setCurrentClass] = useState(null);
     const [nextClass, setNextClass] = useState("");
     const [prevClass, setPrevClass] = useState("");
     const [isLoading, setIsLoading] = useState(true);
-    const [activeOption, setActiveOption] = useState("type");
 
     useEffect(() => {
         for(const classObj of data.modules) {
@@ -91,19 +88,7 @@ export default function Class({ data, setPageTitle }) {
                     </div>
                 </div>
             </div>
-            <div className="options">
-                <div className={ `card type${activeOption === "type" ? " active" : ""}` } onClick={() => setActiveOption('type')} >Corrigé type</div>
-                <div className={ `card note${activeOption === "note" ? " active" : ""}` } onClick={() => setActiveOption('note')} >Les Notes</div>
-                <div className={ `card recour${activeOption === "recour" ? " active" : ""}` } onClick={() => setActiveOption('recour')} >Les Recours</div>
-            </div>
-            {
-                activeOption === 'type' ? 
-                    <CType /> 
-                : activeOption === 'note' ?
-                    <Marks />
-                :
-                    <Recours />
-            }
+            <Options userType={USER_TYPES.TEACHER}/>
         </>
     )
 }
