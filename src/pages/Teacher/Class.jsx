@@ -1,11 +1,16 @@
 import { useParams } from "react-router"
 import { useState, useEffect } from "react"
 import InfoCard from "../../components/InfoCard"
-import Date from "../../components/Date";
+import Date from "../../components/Date"
+import { ReactComponent as ArrowIcon } from "../../assets/icons/duplicate_arrows.svg"
+import { Link } from "react-router-dom"
 export default function Class({ data, setPageTitle }) {
     const { classe } = useParams();
     const [currentClass, setCurrentClass] = useState(null);
+    const [nextClass, setNextClass] = useState("");
+    const [prevClass, setPrevClass] = useState("");
     const [isLoading, setIsLoading] = useState(true);
+    const [activeOption, setActiveOption] = useState("type");
 
     useEffect(() => {
         for(const classObj of data.modules) {
@@ -16,6 +21,13 @@ export default function Class({ data, setPageTitle }) {
             }
         }
         setIsLoading(false);
+        const currentIndex = data.modules.indexOf(currentClass);
+        // To get the next class object:
+        const nextIndex = (currentIndex + 1) % data.modules.length;
+        setNextClass(data.modules[nextIndex].name);
+        // To get the previous class object:
+        const prevIndex = (currentIndex - 1 + data.modules.length) % data.modules.length;
+        setPrevClass(data.modules[prevIndex].name);
         return () => setPageTitle('Class inconnue');
     }, [classe]);
 
@@ -33,11 +45,17 @@ export default function Class({ data, setPageTitle }) {
     return (
         <>
             <div className="class-container">
-                <div className="prev">précédent</div>
+                <Link className="prev" to={"/classes/" + prevClass}>
+                    <ArrowIcon />
+                    Précédent 
+                </Link>
                 <div className="class-name">
                     {currentClass.name}
                 </div>
-                <div className="next">suivant</div>
+                <Link className="next" to={"/classes/" + nextClass}>
+                    Suivant
+                    <ArrowIcon />
+                </Link>
             </div>
             <InfoCard 
                 state={currentClass.filled ? "Remplie" : "Pas remplie"}
@@ -48,7 +66,7 @@ export default function Class({ data, setPageTitle }) {
                 prof={data.name}
                 studentNum={currentClass.studentsNumber}
             />
-                        <div className="timing card">
+            <div className="timing card">
                 <h2>
                     Période de temps
                 </h2>
@@ -68,6 +86,11 @@ export default function Class({ data, setPageTitle }) {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="options">
+                <div className={ `card type${activeOption === "type" ? " active" : ""}` } onClick={() => setActiveOption('type')} >Corrigé type</div>
+                <div className={ `card note${activeOption === "note" ? " active" : ""}` } onClick={() => setActiveOption('note')} >Les Notes</div>
+                <div className={ `card recour${activeOption === "recour" ? " active" : ""}` } onClick={() => setActiveOption('recour')} >Les Recours</div>
             </div>
         </>
     )
