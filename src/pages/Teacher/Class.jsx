@@ -4,6 +4,10 @@ import InfoCard from "../../components/InfoCard"
 import Date from "../../components/Date"
 import { ReactComponent as ArrowIcon } from "../../assets/icons/duplicate_arrows.svg"
 import { Link } from "react-router-dom"
+import CType from "../../components/CType"
+import Marks from "../../components/Marks"
+import Recours from "../../components/Recours"
+
 export default function Class({ data, setPageTitle }) {
     const { classe } = useParams();
     const [currentClass, setCurrentClass] = useState(null);
@@ -92,6 +96,14 @@ export default function Class({ data, setPageTitle }) {
                 <div className={ `card note${activeOption === "note" ? " active" : ""}` } onClick={() => setActiveOption('note')} >Les Notes</div>
                 <div className={ `card recour${activeOption === "recour" ? " active" : ""}` } onClick={() => setActiveOption('recour')} >Les Recours</div>
             </div>
+            {
+                activeOption === 'type' ? 
+                    <CType /> 
+                : activeOption === 'note' ?
+                    <Marks />
+                :
+                    <Recours />
+            }
         </>
     )
 }
