@@ -3,6 +3,7 @@ import { useParams } from "react-router"
 import Date from "../../components/Date"
 import studentData from "../../data/student.json"
 import InfoCard from "../../components/InfoCard"
+import Options from "../../components/Options"
 export default function Consulte({setModule}) {
     const { module } = useParams();
     const [currentModule, setCurrentModule] = useState(null);
@@ -60,6 +61,7 @@ export default function Consulte({setModule}) {
                         </div>
                     </div>
                 </div>
+                <Options />
             </div>
         </>
     )
