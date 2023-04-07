@@ -1,7 +1,6 @@
-import { USER_TYPES } from "../data/Consts"
-import { ReactComponent as ArrowIcon } from "../assets/icons/left_to_right_arrow.svg"
+import { USER_TYPES } from "../../data/Consts"
+import { ReactComponent as ArrowIcon } from "../../assets/icons/left_to_right_arrow.svg"
 export default function MarksTable({file, userType}) {
-    console.log(file)
     return (
     <div className="table classes marks">
         <table>

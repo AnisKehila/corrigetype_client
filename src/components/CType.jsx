@@ -7,7 +7,7 @@ export default function CType({userType}) {
 
   const [formData, setFormData] = useState({
     cType: ''
-}); 
+  }); 
 const [isDragOver, setIsDragOver] = useState(false);
 
 // Drag files Into Form Functions 

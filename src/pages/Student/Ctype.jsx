@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { ReactComponent as SearchIcon } from "../../assets/icons/search.svg";
-import ModulsTable from "../../components/ModulsTable";
+import { useState } from "react"
+import { ReactComponent as SearchIcon } from "../../assets/icons/search.svg"
+import ModulsTable from "../../components/tables/ModulsTable"
 
 export default function Ctype({ student }) {
     const [filteredModules, setFilteredModules] = useState(student.modules);

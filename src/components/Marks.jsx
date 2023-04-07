@@ -4,7 +4,7 @@ import { ReactComponent as UploadIcon } from "../assets/icons/upload.svg"
 import { ReactComponent as DownloadIcon } from "../assets/icons/download.svg"
 import { ReactComponent as AlertIcon } from "../assets/icons/info.svg"
 import notesExample from "../assets/notes-example.csv"
-import MarksTable from './MarksTable'
+import MarksTable from './tables/MarksTable'
 export default function Marks({userType}) {
   const [formData, setFormData] = useState({
     marks: ''

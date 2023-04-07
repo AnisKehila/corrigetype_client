@@ -3,6 +3,7 @@ import { useParams } from "react-router"
 import Date from "../../components/Date"
 import studentData from "../../data/student.json"
 import InfoCard from "../../components/InfoCard"
+import { USER_TYPES } from "../../data/Consts.js"
 import Options from "../../components/Options"
 export default function Consulte({setModule}) {
     const { module } = useParams();
@@ -61,8 +62,8 @@ export default function Consulte({setModule}) {
                         </div>
                     </div>
                 </div>
-                <Options />
             </div>
+            <Options userType={USER_TYPES.STUDENT}/>
         </>
     )
 }

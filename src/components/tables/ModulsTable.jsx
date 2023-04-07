@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Link } from "react-router-dom";
-import { ReactComponent as ArrowIcon } from "../assets/icons/left_to_right_arrow.svg"
-import RecourForm from "./RecourForm"
+import { ReactComponent as ArrowIcon } from "../../assets/icons/left_to_right_arrow.svg"
+import RecourForm from "../RecourForm"
 export default function ModulsTable({modules}) {
     const [formToggle, setFormToggle] = useState(false);
     const [currentModule, setCurrentModule] = useState('');

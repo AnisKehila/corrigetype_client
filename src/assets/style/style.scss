@@ -32,13 +32,14 @@ a {
 	width: 100%;
 	min-height: 100vh;
 	.sidebar {
-		flex-direction: column;
 		max-width: 300px;
-		align-items: flex-start;
 		padding: 32px 24px;
-		gap: 10px;
 		background: #ffffff;
 		box-shadow: 0px 0px 10px rgba(132, 132, 132, 0.15);
+        .content {
+            position: sticky;
+            top: 32px;
+        }
         .logo {
             display: flex;
             flex-direction: row;
@@ -270,6 +271,7 @@ a {
                 overflow-x: auto;
                 filter: drop-shadow(0px 0px 10px rgba(132, 132, 132, 0.15));
                 border-radius: 8px;
+                position: relative;
                 table {
                     min-width: 1000px;
                     width: 100%;
@@ -381,6 +383,72 @@ a {
                     filter: none;
                     border-radius: 0;
                     border-top: 1px solid #D7D7D7;      
+                }
+                .recours-validator {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    overflow: hidden;
+                    background-color: rgba(132, 132, 132, 0.35);
+                    display: none;
+                    &.active {
+                        display: block;
+                        .form {
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 100%;
+                            background-color: #FFFF;
+                            padding: 16px 32px;
+                            display: flex;
+                            >div {
+                                flex: 1;
+                                >div {
+                                    padding: 16px 28px;
+                                    &.raison {
+                                        background: #F8F8F8;
+                                        border-radius: 8px;
+                                        span {
+                                            font-weight: 700;
+                                            color: $text_secondary;
+                                        }
+                                        p {
+                                            font-weight: 400;
+                                            font-size: 15px;
+                                            margin-top: 4px;
+                                        }
+                                    }
+                                }
+                                &.decisoin {
+                                    display: flex;
+                                    justify-content: center;
+                                    gap: 12px;
+                                    margin: auto;
+                                }
+                            }
+                            button {
+                                padding: 10px 16px;
+                                border-radius: 8px;
+                                font-weight: 800;
+                                letter-spacing: 0.02em;
+                                font-size: 16px;
+                                color: #FFFFFF;
+                                cursor: pointer;
+                                border: none;
+                                width: 167px;
+                                height: 44px;
+                                &.accept {
+                                    background-color: #3AC922;
+                                }
+                                &.refus {
+                                    background-color: #FF3030;
+                                }
+                            }
+                        }
+                    }
                 }
             }
             .cards {
@@ -640,7 +708,7 @@ a {
                         display: flex;
                         align-items: center;
                         gap: 24px;
-                        div {
+                        >div {
                             display: none;
                             gap: 12px;
                             span.property {
@@ -670,7 +738,7 @@ a {
                                 border-radius: 50%;
                             }
                             .txt {
-                                display: flex;
+                                display: flex ;
                                 flex-direction: column;
                                 gap: 0;
                                 .txt-bold {
@@ -743,34 +811,12 @@ a {
                             align-items: flex-start;
                             gap: 8px;
                             flex: 1;
-                            div.objection {
+                            .objection {
                                 flex-direction: column;
                             }
-                            div.etat {
+                            .etat {
                                 position: absolute;
                                 top: 75%;
-                            }
-                            div.justificatif {
-                                flex-direction: column;
-                                width: 100%;
-                                .download-container {
-                                    .txt {
-                                        display: flex;
-                                        align-items: center;
-                                        gap: 20px;
-                                        color: $text_secondary;
-                                        font-weight: 600;
-                                    }
-                                    border-radius: 8px;
-                                    padding: 8px;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: space-between;
-                                    transition: .3s;
-                                    &:hover {
-                                        background-color: #ECF0FF;
-                                    }
-                                }
                             }
                             >div {
                                 display: flex;
@@ -779,6 +825,29 @@ a {
                         }
                     }
                 }        
+            }
+            .justificatif {
+                flex-direction: column;
+                width: 100%;
+                .download-container {
+                    cursor: pointer;
+                    .txt {
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                        color: $text_secondary;
+                        font-weight: 600;
+                    }
+                    border-radius: 8px;
+                    padding: 8px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    transition: .3s;
+                    &:hover {
+                        background-color: #ECF0FF;
+                    }
+                }
             }
             .info-card {
                 gap: 32px !important;
@@ -942,7 +1011,7 @@ a {
             }
             .ctype {
                 padding: 0;
-                p {
+                >p {
                     font-weight: 700;
                     font-size: 18px;
                     color: $text_secondary;

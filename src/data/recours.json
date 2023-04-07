@@ -1,0 +1,42 @@
+[  
+    {
+        "Nom": "Ali",
+        "Email": "example@google.com",
+        "Matricule": "A001",
+        "Section": "Electronics",
+        "Groupe": "1",
+        "Justificatif": "/example.pdf",
+        "Raison": "I believe I deserve a higher grade because I followed the rubric and addressed all the criteria.",
+        "Note": 18  
+    },  
+    {
+        "Nom": "Fatima",
+        "Email": "example@google.com",
+        "Matricule": "A002",
+        "Section": "Information Technology",
+        "Groupe": "2",
+        "Justificatif": "/example.pdf",
+        "Raison": "I believe I deserve a higher grade because I followed the rubric and addressed all the criteria.",
+        "Note": 14  
+    },  
+    {
+        "Nom": "Mohammed",
+        "Email": "example@google.com",
+        "Matricule": "A003",
+        "Section": "Mechanical Engineering",
+        "Groupe": "1",
+        "Justificatif": "/example.pdf",
+        "Raison": "I believe I deserve a higher grade because I followed the rubric and addressed all the criteria.",
+        "Note": 20  
+    },  
+    {
+        "Nom": "Aisha",
+        "Email": "example@google.com",
+        "Matricule": "A004",
+        "Section": "Civil Engineering",
+        "Groupe": "2",
+        "Justificatif": "/example.pdf",
+        "Raison": "I believe I deserve a higher grade because I followed the rubric and addressed all the criteria.",
+        "Note": 12  
+    }
+]
