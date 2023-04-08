@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ReactComponent as ArrowIcon } from "../assets/icons/left_to_right_arrow.svg"
+import { ReactComponent as ArrowIcon } from "../../assets/icons/left_to_right_arrow.svg"
 export default function ModulsTable({classes}) {
     return (
         <div className="table classes">

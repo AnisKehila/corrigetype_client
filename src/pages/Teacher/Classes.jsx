@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { ReactComponent as SearchIcon } from "../../assets/icons/search.svg";
-import ClassesTable from "../../components/ClassesTable"
+import ClassesTable from "../../components/tables/ClassesTable"
 export default function Classes({setPageTitle, data}) {
     useEffect(() => {
         setPageTitle('Classes');

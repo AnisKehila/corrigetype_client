@@ -1,10 +1,6 @@
-import { useState } from "react"
-import { ReactComponent as ArrowIcon } from "../../assets/icons/left_to_right_arrow.svg"
-import RecoursValidator from "./RecourValidator"
+import RecoursRow from "./RecoursRow"
 import recours from "../../data/recours.json"
 export default function RecoursTable() {
-    const [open, setOpen] = useState(false);
-    const [recoursValidatorStudent, setRecoursValidatorStudent] = useState();
     return (
     <div className="table classes marks">
         <table>
@@ -21,31 +17,11 @@ export default function RecoursTable() {
             <tbody>
                 {
                     recours.map(row => 
-                        <tr key={row.Matricule} className={open ? "opened" : ""}>
-                            <td className="name">
-                                <span>
-                                    {row.Nom}
-                                </span>
-                                <span>
-                                    {row.Email}
-                                </span>
-                            </td>
-                            <td>{row.Matricule}</td>
-                            <td>{row.Section}</td>
-                            <td>{row.Groupe}</td>
-                            <td>{row.Note}</td>
-                            <td className="consult" onClick={() => {setOpen(true) ; setRecoursValidatorStudent(row)}}>
-                                <span>
-                                    Consulter
-                                    <ArrowIcon />
-                                </span>
-                            </td>
-                        </tr>
+                        <RecoursRow  key={row.Matricule} student={row}/> 
                     )
                 }
             </tbody>
         </table>
-        {recoursValidatorStudent ? <RecoursValidator student={recoursValidatorStudent} open={open} setOpen={setOpen}/> : ""}
     </div>
     )
 }
