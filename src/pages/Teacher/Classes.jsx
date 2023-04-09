@@ -4,7 +4,7 @@ import ClassesTable from "../../components/tables/ClassesTable"
 export default function Classes({setPageTitle, data}) {
     useEffect(() => {
         setPageTitle('Classes');
-    })
+    }, [])
     const [filteredModules, setFilteredModules] = useState(data.modules);
     const handleSearchChange = (event) => {
         const value = event.target.value;

@@ -9,27 +9,28 @@ import { USER_TYPES } from "../../data/Consts"
 export default function Class({ data, setPageTitle }) {
     const { classe } = useParams();
     const [currentClass, setCurrentClass] = useState(null);
-    const [nextClass, setNextClass] = useState("");
-    const [prevClass, setPrevClass] = useState("");
+    const [nextClass, setNextClass] = useState(null);
+    const [prevClass, setPrevClass] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        for(const classObj of data.modules) {
-            if(classe == classObj.name) {
-                setCurrentClass(classObj);
-                setPageTitle(classe);
-                setIsLoading(false);
-            }
-        }
+        const classIndex = data.modules.findIndex((classObj) => classObj.name === classe);
+        setCurrentClass(data.modules[classIndex]);
+        setPageTitle(classe);
         setIsLoading(false);
-        const currentIndex = data.modules.indexOf(currentClass);
-        // To get the next class object:
-        const nextIndex = (currentIndex + 1) % data.modules.length;
-        setNextClass(data.modules[nextIndex].name);
-        // To get the previous class object:
-        const prevIndex = (currentIndex - 1 + data.modules.length) % data.modules.length;
-        setPrevClass(data.modules[prevIndex].name);
-        return () => setPageTitle('Class inconnue');
+        // Find the previous class
+        if (classIndex > 0) {
+            setPrevClass(data.modules[classIndex - 1].name);
+        } else {
+            setPrevClass(prevClass);
+        }
+    
+        // Find the next class
+        if (classIndex < data.modules.length - 1) {
+            setNextClass(data.modules[classIndex + 1].name);
+        } else {
+            setNextClass(nextClass);
+        }
     }, [classe]);
 
     if (isLoading) {
@@ -37,6 +38,7 @@ export default function Class({ data, setPageTitle }) {
     }
 
     if (!currentClass) {
+        setPageTitle('Class inconnue');
         return (
             <div className="unavailable">
                 Nous n'avons pas pu trouver la classe que vous recherchez.

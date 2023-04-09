@@ -6,6 +6,8 @@
         "Section": "Electronics",
         "Groupe": "1",
         "Justificatif": "/example.pdf",
+        "HasResponde": false,
+        "Respond": "",
         "Raison": "I believe I deserve a higher grade because I followed the rubric and addressed all the criteria.",
         "Note": 18  
     },  
@@ -16,6 +18,8 @@
         "Section": "Information Technology",
         "Groupe": "2",
         "Justificatif": "/example.pdf",
+        "HasResponde": false,
+        "Respond": "",
         "Raison": "I believe I deserve a higher grade because I followed the rubric and addressed all the criteria.",
         "Note": 14  
     },  
@@ -27,7 +31,10 @@
         "Groupe": "1",
         "Justificatif": "/example.pdf",
         "Raison": "I believe I deserve a higher grade because I followed the rubric and addressed all the criteria.",
-        "Note": 20  
+        "Note": 8,
+        "HasResponde": true,
+        "Respond": "favorable",
+        "NewNote": 12  
     },  
     {
         "Nom": "Aisha",
@@ -37,6 +44,9 @@
         "Groupe": "2",
         "Justificatif": "/example.pdf",
         "Raison": "I believe I deserve a higher grade because I followed the rubric and addressed all the criteria.",
-        "Note": 12  
+        "Note": 12 , 
+        "HasResponde": true,
+        "Respond": "defavorable",
+        "RefusRaison": "Gg well played"
     }
 ]
