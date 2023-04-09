@@ -95,9 +95,6 @@ a {
                         text-decoration: underline;
                     }
                 }
-                &.menu {
-                    display: none;
-                }
             }
         }
     }
@@ -1376,17 +1373,47 @@ a {
             z-index: 1;
         }
     }
+    #menu-togler {
+        display: none;
+    }
 }
-
 @media (max-width: 654px) {
 	#root {
 		display: block;
+        #menu-togler {
+            display: block;
+            position: fixed;
+        }
 		.sidebar {
-			display: block;
-			position: absolute;
+			position: fixed;
 			z-index: 2;
 			min-height: 100%;
+            padding: 8px;
 			display: none;
+            border-radius: 8px;
+            left: 10px;
+            .logo {
+                flex-direction: column;
+                width: auto;
+                height: auto;
+                text-align: center;
+                .line{
+                    display: none;
+                }
+                .faculty {
+                    display: none;
+                }
+            }
+            ul {
+                li {
+                    span {
+                        display: none;
+                    }
+                }
+            }
+            &.active {
+                display: block;
+            }
 		}
 		.content {
 			margin: 0;

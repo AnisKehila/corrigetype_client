@@ -14,7 +14,7 @@ function Icon({iconName}) {
             return <ClassesIcon />
     }
 }
-export default function SideBarLink({link}) {
+export default function SideBarLink({link, SetSmallScreenSideBarToggler}) {
     const location = useLocation();
     const [isActive, setIsActive] = useState(false);
     
@@ -24,7 +24,7 @@ export default function SideBarLink({link}) {
     
     return (
         <li >
-            <NavLink to={link.link} className={isActive ? 'active' : ''}>
+            <NavLink to={link.link} className={isActive ? 'active' : ''} onClick={() => SetSmallScreenSideBarToggler(false)}>
                 <Icon iconName={link.icon}/>
                 <span>{link.content}</span>  
             </NavLink>
