@@ -2,11 +2,14 @@ import { useRef, useState } from 'react'
 import { ReactComponent as BurgerIcon } from "../../assets/icons/burger_menu.svg"
 import { ReactComponent as NotificationIcon } from "../../assets/icons/notification.svg"
 import { ReactComponent as UserDetails } from "../../assets/icons/arrow.svg"
+import { ReactComponent as MenuIcon } from "../../assets/icons/menu.svg"
+
 import UserParams from "./UserParams"
 import Notifications from './Notifications'
 export default function NavBar({user, module , notifications}) {
     const [notifToggle, setNotifToggle] = useState(false);
     const [userParamsToggle, setUserParamsToggle] = useState(false);
+    const [smallScreenSideBarToggler, SetSmallScreenSideBarToggler] = useState(false);
     const billRef = useRef(null);
     const userRef = useRef(null);
     const numOfNotif = () => {
@@ -15,8 +18,11 @@ export default function NavBar({user, module , notifications}) {
     }
     return (
         <nav>
+            <span id="menu-togler" onClick={() => SetSmallScreenSideBarToggler(!smallScreenSideBarToggler)}>
+                <MenuIcon />
+            </span>
             <div>
-                <BurgerIcon />
+                <BurgerIcon className="burger-icon" />
                 <span className="location">{module}</span>
             </div>
             <div className="btns">
