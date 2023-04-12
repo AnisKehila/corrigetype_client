@@ -13,4 +13,15 @@ export default function Recours({userType}) {
             </>
         )
     }
+    if(userType === USER_TYPES.STUDENT) {
+        return (
+            <>  
+                <div className="card ctype">
+                    <p>
+                        List de Recours
+                    </p>
+                </div>
+            </>
+        )
+    }
 }

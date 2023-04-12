@@ -6,10 +6,9 @@ import { ReactComponent as MenuIcon } from "../../assets/icons/menu.svg"
 
 import UserParams from "./UserParams"
 import Notifications from './Notifications'
-export default function NavBar({user, module , notifications}) {
+export default function NavBar({user, module , notifications, SetSmallScreenSideBarToggler, smallScreenSideBarToggler}) {
     const [notifToggle, setNotifToggle] = useState(false);
     const [userParamsToggle, setUserParamsToggle] = useState(false);
-    const [smallScreenSideBarToggler, SetSmallScreenSideBarToggler] = useState(false);
     const billRef = useRef(null);
     const userRef = useRef(null);
     const numOfNotif = () => {

@@ -1,0 +1,99 @@
+{
+    "name": "Ba, abdelhadi",
+    "type": "departement",
+    "modules": [
+        {
+            "name": "Web Development",
+            "domain": "Math & Informatqiue",
+            "level": "licence 2",
+            "speciality": "System Informatique",
+            "filled": true,
+            "studentsNumber": 32,
+            "numberOfRecours": 8,
+            "revisedRecours": 6,
+            "positiveRecours": 2
+        },
+        {
+            "name": "Analyzes",
+            "domain": "Math & Informatqiue",
+            "level": "master 2",
+            "speciality": "Ingénierie des systèmes d'information",
+            "filled": false,
+            "studentsNumber": 40
+        },
+        {
+            "name": "UI-UX",
+            "domain": "Math & Informatqiue",
+            "level": "licence 3",
+            "speciality": "Dévelopment web & infographie",
+            "filled": true,
+            "studentsNumber": 45,
+            "numberOfRecours": 21,
+            "revisedRecours": 15,
+            "positiveRecours": 7
+        },
+        {
+            "name": "Calculus I",
+            "domain": "Math & Informatqiue",
+            "level": "master 1",
+            "speciality": "System Informatique",
+            "filled": true,
+            "studentsNumber": 27,
+            "numberOfRecours": 42,
+            "revisedRecours": 17,
+            "positiveRecours": 8
+        },
+        {
+            "name": "Data Structures",
+            "domain": "Math & Informatqiue",
+            "level": "licence 1",
+            "speciality": "System Informatique",
+            "filled": false,
+            "studentsNumber": 47
+        },
+        {
+            "name": "CMS: Wordpress",
+            "domain": "Math & Informatqiue",
+            "level": "licence 2",
+            "speciality": "Dévelopment web & infographie",
+            "filled": true,
+            "studentsNumber": 29,
+            "numberOfRecours": 112,
+            "revisedRecours": 94,
+            "positiveRecours": 66
+        },
+        {
+            "name": "Web Design",
+            "domain": "Math & Informatqiue",
+            "level": "licence 2",
+            "speciality": "System Informatique",
+            "filled": true,
+            "studentsNumber": 30,
+            "numberOfRecours": 68,
+            "revisedRecours": 58,
+            "positiveRecours": 33
+        },
+        {
+            "name": "Responsive Web Design",
+            "domain": "Math & Informatqiue",
+            "level": "licence 3",
+            "speciality": "System Informatique",
+            "filled": true,
+            "studentsNumber": 30,
+            "numberOfRecours": 6,
+            "revisedRecours": 4,
+            "positiveRecours": 2
+        },
+        {
+            "name": "JavaScript Frameworks",
+            "domain": "Math & Informatqiue",
+            "level": "master 1",
+            "speciality": "System Informatique",
+            "filled": false,
+            "studentsNumber": 52
+        }
+    ],
+    "notifications" : [
+        {"id": 0, "content" : "le calendrier de recours a été déclaré veuillez remplir les modules assignés"}
+    ]
+}

@@ -8,16 +8,19 @@ const teacherLinks = [
     {content: 'Tableau de bord', icon: 'Home', link: '/'},
     {content: 'Classes', icon: 'Persones' , link: '/classes'}
 ];
+const adminLinks = [
+    {content: 'Tableau de bord', icon: 'Home', link: '/'},
+    {content: 'Classes', icon: 'Persones' , link: '/classes'}
+];
 export function sideBarHandler(userType) {
     switch (userType) {
     case USER_TYPES.ADMIN:
-        return 
+        return adminLinks
     case USER_TYPES.STUDENT:
-        return studentLinks;
+        return studentLinks
     case USER_TYPES.TEACHER:
         return teacherLinks
     default:
         return ''
     }
-    
 }

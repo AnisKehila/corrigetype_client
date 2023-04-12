@@ -48,5 +48,41 @@
         "HasResponde": true,
         "Respond": "defavorable",
         "RefusRaison": "Gg well played"
+    },
+    {
+        "Nom": "Ahmed",
+        "Email": "example@google.com",
+        "Matricule": "A005",
+        "Section": "Computer Science",
+        "Groupe": "3",
+        "Justificatif": "/example.pdf",
+        "HasResponde": false,
+        "Respond": "",
+        "Raison": "I believe I deserve a higher grade because I put in a lot of effort and completed all the required tasks.",
+        "Note": 16
+    },
+    {
+        "Nom": "Rania",
+        "Email": "example@google.com",
+        "Matricule": "A006",
+        "Section": "Chemical Engineering",
+        "Groupe": "1",
+        "Justificatif": "/example.pdf",
+        "HasResponde": true,
+        "Respond": "favorable",
+        "NewNote": 17,
+        "Raison": "I believe I deserve a higher grade because I did additional research and included more references in my report."
+    },
+    {
+        "Nom": "Omar",
+        "Email": "example@google.com",
+        "Matricule": "A007",
+        "Section": "Electrical Engineering",
+        "Groupe": "2",
+        "Justificatif": "/example.pdf",
+        "HasResponde": true,
+        "Respond": "defavorable",
+        "RefusRaison": "Your report did not meet the minimum requirements for this assignment.",
+        "Raison": "I believe I deserve a higher grade because I worked hard and put a lot of effort into completing the assignment."
     }
 ]
