@@ -13,7 +13,7 @@ export function index({smallScreenSideBarToggler, SetSmallScreenSideBarToggler})
     const location = useLocation().pathname;
     return (
             <div className="content">
-                <NavBar user={teacher.name} notifications={teacher.notifications} module= {pageTitle} smallScreenSideBarToggler= {smallScreenSideBarToggler} SetSmallScreenSideBarToggler = {SetSmallScreenSideBarToggler}/>
+                <NavBar user={admin.name} notifications={admin.notifications} module= {pageTitle} smallScreenSideBarToggler= {smallScreenSideBarToggler} SetSmallScreenSideBarToggler = {SetSmallScreenSideBarToggler}/>
 
                 <main className="main">
                 {  

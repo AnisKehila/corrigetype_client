@@ -6,7 +6,7 @@ import Home from './pages/Home.jsx'
 import { sideBarHandler } from './utils/sideBarHandler'
 import { useState } from 'react'
 function App() {
-  const User = USER_TYPES.STUDENT;
+  const User = USER_TYPES.TEACHER;
   const isLogged = true;
   const [smallScreenSideBarToggler, SetSmallScreenSideBarToggler] = useState(false);
 

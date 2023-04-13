@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { ReactComponent as NoteIcon } from "../../assets/icons/note.svg"
 import { ReactComponent as ExitIcon } from "../../assets/icons/exit.svg"
 import { ReactComponent as EtatIcon } from "../../assets/icons/exclamation.svg"
